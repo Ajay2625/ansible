@@ -1,0 +1,7 @@
+- name: nginx installation
+  hosts: backend
+  tasks: 
+  - name: nginx
+    state: installed
+  - name: nginx
+    state: started
