@@ -1,4 +1,5 @@
 - name: nginx installation
+  become: true
   hosts: backend
   tasks:
     - name: install nginx
