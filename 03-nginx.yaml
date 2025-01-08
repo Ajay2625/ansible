@@ -1,7 +1,11 @@
 - name: nginx installation
   hosts: backend
-  tasks: 
-  - name: nginx
-    state: installed
-  - name: nginx
-    state: started
+  tasks:
+    - name: install nginx
+      dnf:
+        name: nginx
+        state: installed
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
