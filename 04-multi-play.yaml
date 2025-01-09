@@ -1,5 +1,5 @@
 - name: PLAY1
-  hosts: 1ocal
+  hosts: local
   connection: local
   tasks:
     - name: play1 and task1
