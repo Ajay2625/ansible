@@ -2,4 +2,5 @@
   hosts: backend
   tasks:
     - name: Gathering facts infotration
-      ansible.builtin.debug: msg:"{ {ansible_facts} }"
+      ansible.builtin.debug: 
+        msg:"{{ ansible_facts }}"
