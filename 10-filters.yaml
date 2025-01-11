@@ -3,4 +3,4 @@
   connection: local
   tasks:
     ansible.builtin.debug:
-      msg: "{ { COURSE | default("Ramesh") }}"
+      msg: "{ { COURSE | default('Ramesh') }}"
