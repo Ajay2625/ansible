@@ -15,11 +15,11 @@
       ansible.builtin.debug:
         msg: "{{ COURSE | dict2items }}"
 
-    - name: filters in ansible
+    - name: items to list
       vars:
         COURSE:
           - { "key": "name", "value": "devops" }
           - { "key": "duration", "value": "120HRS" }
           - { "key": "trainer", "value": "shiva" }
       ansible.builtin.debug:
-        msg: "{{ COURSE | items2list }}"
+        msg: "{{ COURSE | items2dict }}"
