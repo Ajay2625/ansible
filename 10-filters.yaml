@@ -34,3 +34,7 @@
         COURSE: "apple"
       ansible.builtin.debug:
         msg: "{{ COURSE | upper }}"
+    - name: min and max in a list
+      vars: numbers:[1,7,6,13,21]
+      ansible.builtin.debug:
+        msg: "min is: {{ numbers | min }},max is : {{ numbers | max }}"
