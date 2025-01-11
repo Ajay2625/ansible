@@ -29,3 +29,8 @@
         fruits: "apple,banana,orange"
       ansible.builtin.debug:
         msg: "{{ fruits | split(',') }}"
+    - name: upper
+      vars:
+        COURSE: "apple"
+      ansible.builtin.debug:
+        msg: "{{ COURSE | upper }}"
