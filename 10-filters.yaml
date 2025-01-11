@@ -2,6 +2,15 @@
   hosts: local
   connection: local
   tasks:
-    - name: using filters
+    - name: using default
       ansible.builtin.debug:
         msg: "{{ COURSE | default('Ramesh') }}"
+
+    - name: filters in ansible
+      vars:
+        COURSE:
+          COURSE_NAME: "devops"
+          DURATION: "120HRS"
+          TRAINER: "Siva"
+      ansible.builtin.debug:
+        msg: "{{ COURSE | dict2items }}"
