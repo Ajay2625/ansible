@@ -2,5 +2,6 @@
   hosts: local
   connection: local
   tasks:
-    ansible.builtin.debug:
-      msg: "{{ COURSE | default('Ramesh') }}"
+    - name: using filters
+      ansible.builtin.debug:
+        msg: "{{ COURSE | default('Ramesh') }}"
