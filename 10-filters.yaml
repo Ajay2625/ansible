@@ -1,0 +1,6 @@
+- name: filters in ansible
+  hosts: local
+  connection: local
+  tasks:
+    ansible.builtin.debug:
+      msg: "{ { COURSE | default("Ramesh") }}"
