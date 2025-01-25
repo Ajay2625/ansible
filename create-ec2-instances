@@ -31,7 +31,7 @@
 
     - name: print ec2_info
       tags:
-        - ec2_info
+        - execute
       ansible.builtin.debug:
         msg: "{{ ec2_info }}"
 
