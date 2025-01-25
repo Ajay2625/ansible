@@ -30,10 +30,10 @@
       register: ec2_info
 
     - name: print ec2_info
-      tags:
-        - execute
       ansible.builtin.debug:
         msg: "{{ ec2_info }}"
+      tags:
+        - execute
 
 
 
